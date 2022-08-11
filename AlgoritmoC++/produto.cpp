@@ -4,27 +4,26 @@ digitados.*/
 #include <iostream>
 #include <locale.h>
 #include <math.h>
+
 using namespace std;
 
-int main (){
+int main() {
 	setlocale(LC_ALL, "Portuguese");
-	int n1, n2;
-	float n3, n4, n5,res;
 	
-	cout << "Digite um numero: ";
-	cin >> n1;
-	cout << "Digite outro numero: ";
-	cin >> n2;
-	cout << "Digite outro numero: ";
-	cin >> n3;
-	cout << "Digite outro numero: ";
-	cin >> n4;
-	cout << "Digite outro numero: ";
-	cin >> n5;
+	int n,p;
+	cout << "Digite 5 numeros: ";
+	cin >> n;
+	p = n;
+	cin >> n;
+	p = p * n; //p *= n;
+	cin >> n;
+	p = p * n;
+	cin >> n;
+	p = p * n;
+	cin >> n;
+	p = p * n;
 	
-	res = n1*n2*n3*n4*n5;
-	
-	cout << "Resultado do produto: "<< res;
+	cout << "Resultado da multiplicação: " << p;
 	
 	return 0;
 }

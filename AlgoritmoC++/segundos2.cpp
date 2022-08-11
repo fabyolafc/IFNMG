@@ -17,7 +17,7 @@ int main (){
     
     mult1 = h*3600;
     mult2 = m*60;
-    soma = mult1+mult2;
+    soma = mult1+mult2+s;
     
     cout<<"Conversão do valor digitado para segundos: "<<soma;
 

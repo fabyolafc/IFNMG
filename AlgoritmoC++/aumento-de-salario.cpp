@@ -40,5 +40,5 @@ int main () {
 		soma = salario + aumento;
 		cout<<"Novo salario: "<<soma;
 	}
-	
+	return 0;
 }

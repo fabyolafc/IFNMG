@@ -1,0 +1,10 @@
+h1 {
+    text-align: center;
+    color:brown;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

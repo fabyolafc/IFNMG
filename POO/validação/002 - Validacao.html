@@ -1,0 +1,98 @@
+﻿<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Validação de Formulários</title>
+
+	<script src="002.js"></script>
+
+</head>
+
+<body>	
+
+	<h1>Exercício de Validação de Formulários</h1>
+
+	<form id="f" method="post" action="https://postman-echo.com/post">
+        
+        <fieldset>
+ 			<legend> Dados gerais </legend>       
+            
+            <label for="nome"> Nome: </label>
+            <input type="text" id="nome" name="nome" size="40" maxlength="40" />
+			
+			<font color="red"><b id="erronome">  </b></font>
+
+			<br/>
+            
+            <label for="sexo"> Selecione seu Sexo: </label>
+            <select id="sexo" name="sexo">
+            	<option value="vazio"> </option>
+                <option value="masc"> Masculino </option>
+                <option value="fem"> Feminino </option>
+            </select>
+
+			<font color="red"><b id="errosexo">  </b></font>
+        
+        </fieldset>
+               
+        <fieldset>
+        	<legend> Onde você nasceu? </legend>
+			<label for="uf">UF: </label>
+			<select id="uf" name="uf">
+				<option value="vazio"> </option>
+				<option value="ba"> Bahia </option>
+				<option value="mg"> Minas Gerais </option>
+				<option value="sp"> São Paulo </option>
+			</select>
+			
+			<br />
+			
+			<label for="cidade">Cidade: </label>
+			<select id="cidade" name="cidade">
+			
+				<option value="vazio"> Selecione primeiro o estado </option>	
+				
+			</select>
+            
+        </fieldset>
+        
+        <input type="submit" id="enviar" name="enviar" value="   Enviar   " />
+        
+        <br />
+        
+        <input type="reset" id="limpar" value="   Limpar   " />
+        
+        <br />                
+        
+    </form>
+    
+    <br />
+    <hr />
+    
+    <h2> Regras para validação </h2>
+
+	Caso alguma das regras abaixo não seja satisfeita, deverá ser exibida uma mensagem para o usuário e dado foco ao campo que seja inválido.
+    
+    <ul>
+    	<li> O nome não pode estar vazio. </li>
+        <li> O sexo não pode estrar vazio.</li>
+        <li> O UF não pode estar vazio.</li>
+        <li> A cidade não pode estar vazia.</li>
+		<li>
+			Quando um estado for selecionado, só deverão estar disponívieis pertencentes a ele, conforme a seguinte relação:
+			<ul>
+				<li>Bahia: Alcubaça, Feira de Santana, Porto Seguro, Santa Ines, Senhor do Bonfim, Tremedal, Tucano, Uaua, Ubaira, Ubaitaba e Ubata. </li>
+				<li>Minas Gerais: Abaeté, Água Boa, Araçuaí, Belo Horizonte, Berilo, Guanhães, Francisco Badaró, Ipatinga, Itinga, Lelivéldia, Viçosa e Virgem da Lapa. </li>
+				<li>São Paulo: Adamantina, Alvares Florence, Areias, Brotas, Cajuru, Iguapé, Presidente Prudente, Santo André, São Paulo e Votorantim. </li>
+			</ul>
+		</li>
+		
+		
+    </ul>
+                 
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA To-Do List</title>
+</head>
+<body>
+    <div id="app">
+        <h1>To-Do List</h1>
+        <ul>
+            <li v-for="task in tasks" :key="task.id">{{ task.text }}</li>
+        </ul>
+        <input v-model="newTask" @keyup.enter="addTask" placeholder="Add a new task">
+    </div>
+
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <!-- Application script -->
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                tasks: [
+                    { id: 1, text: 'Learn Vue.js' },
+                    { id: 2, text: 'Build a SPA' },
+                    { id: 3, text: 'Deploy the app' },
+                ],
+                newTask: '',
+            },
+            methods: {
+                addTask: function() {
+                    if (this.newTask.trim() !== '') {
+                        this.tasks.push({
+                            id: this.tasks.length + 1,
+                            text: this.newTask.trim(),
+                        });
+                        this.newTask = '';
+                    }
+                },
+            },
+        });
+    </script>
+</body>
+</html>
